@@ -9,9 +9,9 @@ mencionadas. A tabela a seguir fornece os pesos das notas:
 Faça um programa que receba as 3 notas do estudante, calcule e imprima a média final e o conceito desse estudante.
 O conceito segue a tabela abaixo:
 	 média final 	 conceito
-	8.0 |__| 10.0 		A
-	7.0 |__  8.0 		B
-	6.0 |__  7.0 		C
+	8.1 |__| 10.0 		A
+	7.1 |__  8.0 		B
+	6.1 |__  7.0 		C
 	5.0 |__  6.0 		D
 		 <	 5.0 		E*/
 
@@ -31,15 +31,24 @@ int main (){
 	printf("Informe a nota do Exame Final: ");
 	scanf("%f", &nota_exame);
 	
+	//Processamento e Saída de dados - calcula media ponderada das notas e verifica qual o conceito
 	media_ponderada = ((nota_lab * 2) + (nota_avaliacao * 3) + (nota_avaliacao * 5)) / (2 + 3 + 5);
-	
-	if(media_ponderada >= 8 && media_ponderada <= 10){
+
+	printf("\nMedia do aluno: %.2f - ", media_ponderada);
+	if(media_ponderada <= 10  && media_ponderada > 8){
 		printf("Conceito A");
-	} else if (media_ponderada < 7 && media_ponderada >= 6)
-	
-	
-	
-	
+	} else if (media_ponderada <= 8 && media_ponderada > 7){
+		printf("Conceito B");
+	} else if (media_ponderada <= 7 && media_ponderada > 6) {
+		printf ("Conceito C");
+	} else if (media_ponderada <= 6 && media_ponderada > 5){
+		printf("Conceito D");
+	} else if (media_ponderada <= 5 && media_ponderada >= 0) {
+		printf("Conceito E");
+	} else {
+		printf("\nValor Invalido!!");
+	}
+
 	return 0;
 }
 

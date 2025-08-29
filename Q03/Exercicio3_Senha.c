@@ -5,33 +5,46 @@ permissão ou negação de acesso.*/
 
 int main (){
 	//Declaração de variáveis
-	char senha[20];
+	char dig1, dig2, dig3, dig4, dig5;
 	
 	//Entrada de dados - Informa a senha
-	printf("Insira a senha: ");
-	scanf("%s", &senha);
+	printf("Informe uma senha de 5 digitos\n");
+	printf("Insira o digito 1: ");
+	scanf("%s", &dig1);
+	
+	printf("Insira o digito 2: ");
+	scanf("%s", &dig2);
+	
+	printf("Insira o digito 3: ");
+	scanf("%s", &dig3);
+	
+	printf("Insira o digito 4: ");
+	scanf("%s", &dig4);
+	
+	printf("Insira o digito 5: ");
+	scanf("%s", &dig5);
 	
 	//Processamento/Saída de dados - Verifica a senha
-	if (senha[0] == 'A'){
-		if (senha[1] == 'S'){
-			if (senha[2] == 'D'){
-				if (senha[3] == 'F'){
-					if (senha[4] == 'G'){
+	if (dig1 == 'A'){
+		if (dig2 == 'S'){
+			if (dig3 == 'D'){
+				if (dig4 == 'F'){
+					if (dig5 == 'G'){
 						printf("Acesso autorizado !!!");
 					} else { //Else de 'G'
-						printf("Acesso negado !!!");
+						printf("Acesso negado");
 					}
 				} else { //Else de 'F'
-					printf("Acesso negado !!!");
+					printf("Acesso negado");
 					}
 			} else { //Else de 'D'
-				printf("Acesso negado !!!");
+				printf("Acesso negado");
 				}
 		} else { //Else de 'S'
-			printf("Acesso negado !!!");
+			printf("Acesso negado");
 			}
 	} else { //Else de 'A'
-		printf("Acesso negado !!!");
+		printf("Acesso negado");
 	}
 
 	return 0;
